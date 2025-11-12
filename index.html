@@ -1,0 +1,43 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CATU BADMOSH</title>
+  <link rel="stylesheet" href="styleee.css">
+</head>
+<body class="cute-bg">
+  <div class="container">
+    <h1>🌸 Welcome to Catu family 🌸</h1>
+
+    <!-- Your name -->
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <!-- Friend's name (✨ newly added line) -->
+    <input type="text" id="friend" placeholder="Enter your friend's name">
+
+    <!-- Message -->
+    <input type="text" id="message" placeholder="What do you want to say?">
+
+    <button onclick="goToVideoPage()">Show Magic ✨</button>
+  </div>
+
+  <script>
+    function goToVideoPage() {
+      const name = document.getElementById('name').value;
+      const friend = document.getElementById('friend').value;
+      const message = document.getElementById('message').value;
+
+      if (!name || !friend || !message) {
+        alert('Please enter your name, your friend\'s name, and message 💬');
+        return;
+      }
+
+      localStorage.setItem('userName', name);
+      localStorage.setItem('friendName', friend);
+      localStorage.setItem('userMessage', message);
+      window.location.href = 'video.html';
+    }
+  </script>
+</body>
+</html>
