@@ -9,10 +9,11 @@ body.cute-bg {
 /* Make video look good on all devices */
 video {
   width: 100%;
+  max-width: 100vw;
   height: auto;
-  max-height: 100vh;
-  object-fit: cover; /* makes it fill the screen nicely */
-  border-radius: 15px;
+  display: block;
+  object-fit: cover;   /* Try 'cover' for fill, 'contain' for full image with bars */
+  background: #000;    /* Optional: match the border color to video content */
 }
 
 @media (max-width: 100%) {
@@ -56,3 +57,4 @@ button:hover {
   background: #ff8da1;
 
 }
+
