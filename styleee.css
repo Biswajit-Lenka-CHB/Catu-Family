@@ -6,7 +6,22 @@ body.cute-bg {
   justify-content: center;
   align-items: center;
 }
+/* Make video look good on all devices */
+video {
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
+  object-fit: cover; /* makes it fill the screen nicely */
+  border-radius: 15px;
+}
 
+@media (max-width: 600px) {
+  video {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* shows full video on phones */
+  }
+}
 .container {
   text-align: center;
   background: rgba(255,255,255,0.85);
