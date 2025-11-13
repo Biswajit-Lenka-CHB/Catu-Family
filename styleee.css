@@ -1,4 +1,4 @@
-body.cute-bg {
+ body.cute-bg {
   background: linear-gradient(135deg, #ffd6e0, #e0bbff);
   font-family: "Poppins", sans-serif;
   height: 100vh;
@@ -39,33 +39,4 @@ button {
 }
 button:hover {
   background: #ff8da1;
-}
-/* Make video fit completely on all screens */
-video {
-  width: 100%;
-  height: auto;
-  max-height: 100vh;
-  object-fit: contain; /* show full video without cutting */
-  border-radius: 15px;
-  display: block;
-  margin: 0 auto;
-}
-
-/* Optional: make background color show behind black bars */
-body {
-  background-color: black;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-/* Adjust for smaller screens */
-@media (max-width: 600px) {
-  video {
-    width: 100%;
-    height: auto;
-  }
 }
