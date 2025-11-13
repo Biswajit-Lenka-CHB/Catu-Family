@@ -1,0 +1,71 @@
+body.cute-bg {
+  background: linear-gradient(135deg, #ffd6e0, #e0bbff);
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  background: rgba(255,255,255,0.85);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4PX 15px rgba(0,0,0,0.15);
+  width: 480px;
+  margin: 10% auto;
+  border: 2PX solid white;
+}
+input {
+  display: block;
+  width: 250px;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  outline: none;
+}
+
+button {
+  background: #ffb6c1;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+button:hover {
+  background: #ff8da1;
+}
+/* Make video fit completely on all screens */
+video {
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
+  object-fit: contain; /* show full video without cutting */
+  border-radius: 15px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Optional: make background color show behind black bars */
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 600px) {
+  video {
+    width: 100%;
+    height: auto;
+  }
+}

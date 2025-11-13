@@ -1,0 +1,88 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CATU BADMOSH</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: pink;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      flex-direction: column;
+      font-family: 'Comic Sans MS', cursive;
+    }
+
+    .video-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    video {
+      border-radius: 15px;
+      display: block;
+    }
+
+    .names {
+      position: absolute;
+      bottom: 13%; /* move up/down to align below cats */
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: space-between;
+      width: 85%; /* adjust this to match cat distance */
+      font-size: 32px;
+      font-weight: bold;
+      color: white;
+      text-shadow: 1px 1px 5px black;}
+      #userName {
+  position: relative;
+  right: 80px; /* move your name slightly to the right */
+}
+
+#friendName {
+  position: relative; /* keep friend’s name as it is */
+  right: 0px;
+}
+
+    .message {
+      position: absolute;
+      bottom: 5%;
+      left: 45%;
+      transform: translateX(-50%);
+      font-size: 28px;
+      color: white;
+      font-weight: 500;
+      text-shadow: 1px 1px 5px black;
+    }
+  </style>
+</head>
+<body>
+  <div class="video-container">
+    <video autoplay loop >
+      <source src="MEMEME.mp4" type="video/mp4">
+    </video>
+
+    <div class="names">
+      <span id="friendName">Friend</span>
+      <span id="userName">You</span>
+    </div>
+
+    <div class="message" id="userMessage">Your message here 💌</div>
+  </div>
+
+  <script>
+    const name = localStorage.getItem('userName');
+    const friend = localStorage.getItem('friendName');
+    const message = localStorage.getItem('userMessage');
+
+    if (name) document.getElementById('userName').textContent = name;
+    if (friend) document.getElementById('friendName').textContent = friend;
+    if (message) document.getElementById('userMessage').textContent = message;
+  </script>
+</body>
+</html>
